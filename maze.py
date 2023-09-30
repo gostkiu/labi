@@ -91,6 +91,9 @@ while game:
         player.update()
         gold.reset()
 
+        for w in walls:
+            w.draw_wall(Wall) 
+
         enemy.reset()
         enemy.update()
         if pygame.sprite.collide_rect(player,enemy):
